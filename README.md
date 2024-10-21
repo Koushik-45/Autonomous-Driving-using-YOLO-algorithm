@@ -1,23 +1,3 @@
-# Object Detection Fro Autonomous Driving using YOLO algorithm
-
------------------
-
-Before starting to read this, I would like you first to download these two videos of 2Mo each :
-
-[Dataset](https://github.com/adnaneaabbar/object-detection-for-autonomous-driving/blob/master/assets/videos/road_video.mp4)
-
-[Prediction](https://github.com/adnaneaabbar/object-detection-for-autonomous-driving/blob/master/assets/videos/pred_video.mp4)
-
-The dataset is made out of 120 images taken by a camera on the hood of a moving car to simulate what autonomous driving will look like.
-
-it is provided by : 
-![](https://github.com/adnaneaabbar/object-detection-for-autonomous-driving/blob/master/assets/images/driveai.png?raw=true)
-
-The prediction is the same video made out of the same 120 images after being fed to the model to draw the bounding boxes.
-
-You can predict using your own photos, just put them in the images folder, and the pediction will be saved in the out folder using this cell : `out_scores, out_boxes, out_classes = predict(sess, "image_name.jpg")`
-
------------------
 
 YOLO ("you only look once") is a popular algoritm because it achieves high accuracy while also being able to run in real-time, almost clocking 45 frames per second. A smaller version of the network, Fast YOLO, processes an astounding 155 frames per second while still achieving double the mAP of other real-time detectors. This algorithm "only looks once" at the image in the sense that it requires only one forward propagation pass through the network to make predictions. After non-max suppression, it then outputs recognized objects together with the bounding boxes.
 
